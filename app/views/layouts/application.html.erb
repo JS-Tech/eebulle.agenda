@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EebulleAgenda</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="header">
+    </div>
+    <div id="container" <%= "class=#{yield(:id)}" if yield(:id).presence %>>
+      <%= yield %>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+
+</body>
+</html>
